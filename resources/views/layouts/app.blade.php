@@ -34,6 +34,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin.posts.index') }}">Posts</a>
+                        </li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -76,5 +80,8 @@
             @yield('content')
         </main>
     </div>
+
+    @yield('scripts')
+    
 </body>
 </html>
