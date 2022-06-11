@@ -1,3 +1,5 @@
+@extends('layouts.app')
+
 <div class="card mx-auto" style="width: 18rem;">
     <img class="card-img-top" src="{{$post->image}}" alt="Card image cap">
     <div class="card-body">
