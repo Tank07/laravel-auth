@@ -9,7 +9,7 @@
         <tr>
             <th scope="col">Title</th>
             <th scope="col">Content</th>
-            <th scope="col">Image</th>
+            {{-- <th scope="col">Image</th> --}}
             <th scope="col">Slug</th>
             <th scope="col">Buttons</th>
         </tr>
@@ -20,9 +20,12 @@
             <tr>
                 <th scope="row">{{$post->title}}</th>
                 <td>{{$post->content}}</td>
-                <td> <img src="{{$post->image}}" alt=""> </td>
+                {{-- <td> <img src="{{$post->image}}" alt=""> </td> lorem picsum non va,rallenta caricamento --}} 
                 <td>{{$post->slug}}</td>
-                <td><a href="{{route('admin.posts.show', $post->id)}}"class="btn btn-info">Show</a></td>
+                <td class="d-flex">
+                    <a href="{{route('admin.posts.show', $post->id)}}"class="btn btn-info">Show</a>
+                    <a href="{{route('admin.posts.edit', $post->id)}}"class="btn btn-success mx-1">Edit</a>
+                </td>
               </tr>
                 
             @empty
