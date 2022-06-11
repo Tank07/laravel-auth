@@ -9,6 +9,7 @@
             <th scope="col">Content</th>
             <th scope="col">Image</th>
             <th scope="col">Slug</th>
+            <th scope="col">Buttons</th>
         </tr>
         </thead>
         <tbody>
@@ -17,8 +18,9 @@
             <tr>
                 <th scope="row">{{$post->title}}</th>
                 <td>{{$post->content}}</td>
-                <td> <img src="{{$post->title}}" alt=""> </td>
+                <td> <img src="{{$post->image}}" alt=""> </td>
                 <td>{{$post->slug}}</td>
+                <td><a href="{{route('admin.posts.show', $post->id)}}"class="btn btn-info">Show</a></td>
               </tr>
                 
             @empty
