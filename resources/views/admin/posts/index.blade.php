@@ -25,6 +25,11 @@
                 <td class="d-flex">
                     <a href="{{route('admin.posts.show', $post->id)}}"class="btn btn-info">Show</a>
                     <a href="{{route('admin.posts.edit', $post->id)}}"class="btn btn-success mx-1">Edit</a>
+                     <form action=" {{ route('admin.posts.destroy', $post->id) }} " method="POST" class="delete-form">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                     </form> 
                 </td>
               </tr>
                 
